@@ -29,7 +29,6 @@ namespace WeatherConcurrencyApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.flpContent = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,11 +92,12 @@ namespace WeatherConcurrencyApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::WeatherConcurrencyApp.Properties.Resources._0;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(755, 523);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flpContent);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "FrmMain";
             this.Text = "Weather Async App";
             this.panel1.ResumeLayout(false);
