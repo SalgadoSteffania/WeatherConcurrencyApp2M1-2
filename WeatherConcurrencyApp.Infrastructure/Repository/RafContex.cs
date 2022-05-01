@@ -68,50 +68,50 @@ namespace WeatherConcurrencyApp.Infrastructure.Repository
                         return default(T);
                     }
 
-                    //long posd = (index - 1) * size;
-                    //brData.BaseStream.Seek(posd, SeekOrigin.Begin);
-                    //foreach (PropertyInfo pinfo in properties)
-                    //{
-                    //    Type type = pinfo.PropertyType;
+                    long posd = (index - 1) * size;
+                    brData.BaseStream.Seek(posd, SeekOrigin.Begin);
+                    foreach (PropertyInfo pinfo in properties)
+                    {
+                        Type type = pinfo.PropertyType;
 
-                    //    if (type.IsGenericType)
-                    //    {
-                    //        continue;
-                    //    }
+                        if (type.IsGenericType)
+                        {
+                            continue;
+                        }
 
-                    //    if (type == typeof(int))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<int>(TypeCode.Int32));
-                    //    }
-                    //    else if (type == typeof(long))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<long>(TypeCode.Int64));
-                    //    }
-                    //    else if (type == typeof(float))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<float>(TypeCode.Single));
-                    //    }
-                    //    else if (type == typeof(double))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<double>(TypeCode.Double));
-                    //    }
-                    //    else if (type == typeof(decimal))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<decimal>(TypeCode.Decimal));
-                    //    }
-                    //    else if (type == typeof(char))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<char>(TypeCode.Char));
-                    //    }
-                    //    else if (type == typeof(bool))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<bool>(TypeCode.Boolean));
-                    //    }
-                    //    else if (type == typeof(string))
-                    //    {
-                    //        pinfo.SetValue(newValue, brData.GetValue<string>(TypeCode.String));
-                    //    }
-                    //}
+                        if (type == typeof(int))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<int>(TypeCode.Int32));
+                        }
+                        else if (type == typeof(long))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<long>(TypeCode.Int64));
+                        }
+                        else if (type == typeof(float))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<float>(TypeCode.Single));
+                        }
+                        else if (type == typeof(double))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<double>(TypeCode.Double));
+                        }
+                        else if (type == typeof(decimal))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<decimal>(TypeCode.Decimal));
+                        }
+                        else if (type == typeof(char))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<char>(TypeCode.Char));
+                        }
+                        else if (type == typeof(bool))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<bool>(TypeCode.Boolean));
+                        }
+                        else if (type == typeof(string))
+                        {
+                            pinfo.SetValue(newValue, brData.GetValue<string>(TypeCode.String));
+                        }
+                    }
                 }
                 return newValue;
             }
